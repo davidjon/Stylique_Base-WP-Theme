@@ -7,6 +7,9 @@
 	Create all the custom post types needed for this theme
 	
 	---------------------------------------------------------------------------
+	
+	POSTTYPE
+	POSTTYPE_SINGULAR
 
 
 */
@@ -21,24 +24,24 @@ class Theme_Posttypes
     
     public function init_posttypes()
     {
-        add_action( 'init', array( &$this, 'create_post_type_occasions' ) );
+        add_action( 'init', array( &$this, 'create_post_type_POSTTYPE' ) );
     }
 
-    public function create_post_type_occasions()
+    public function create_post_type_POSTTYPE()
     {
         $labels = array(
-    		'name'               => __('Occasions'),
-    		'singular_name'      => __('Occasion'),
-    		'add_new'            => __('New occasion'),
-    		'add_new_item'       => __('New occasion'),
-    		'edit_item'          => __('Edit occasion'),
+    		'name'               => __('POSTTYPE'),
+    		'singular_name'      => __('POSTTYPE_SINGULAR'),
+    		'add_new'            => __('New POSTTYPE_SINGULAR'),
+    		'add_new_item'       => __('New POSTTYPE_SINGULAR'),
+    		'edit_item'          => __('Edit POSTTYPE_SINGULAR'),
     		'new_item'           => __('New occasion'),
-    		'all_items'          => __('Show all occasions'),
-    		'view_item'          => __('View occasion'),
-    		'search_items'       => __('Search occasions'),
+    		'all_items'          => __('Show all POSTTYPE'),
+    		'view_item'          => __('View POSTTYPE_SINGULAR'),
+    		'search_items'       => __('Search POSTTYPE'),
     		'not_found'          => __('Nothing found'),
     		'not_found_in_trash' => __('Nothing found'),
-    		'menu_name'          => __('Occasions'),
+    		'menu_name'          => __('POSTTYPE'),
     		'parent_item_colon'  => '',
     	);
     	$args = array(
@@ -55,7 +58,7 @@ class Theme_Posttypes
     		'menu_icon'				=> '',
     		'supports'				=> array( 'title', 'thumbnail' ),
     	);
-        register_post_type('occasion', $args);
+        register_post_type('POSTTYPE_SINGULAR', $args);
     }
 }
 

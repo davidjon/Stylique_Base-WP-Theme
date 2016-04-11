@@ -8,6 +8,9 @@
 	---------------------------------------------------------------------------
 
 
+	POSTTYPE 
+
+
 */
 
 class PostType_Data
@@ -17,7 +20,7 @@ class PostType_Data
     	//...
     }
     
-   public function single_posttype_data($id, $type = 'all')
+   public function single_POSTTYPE_data($id, $type = 'all')
    {
 	   $item = get_post($id); 
 	   
@@ -52,7 +55,7 @@ class PostType_Data
 
    }
 
-   public function get_posttype_taxname($postid, $taxonomy = 'taxname')
+   public function get_POSTTYPE_taxname($postid, $taxonomy = 'taxname')
    {
 	   $item = get_post($postid); 
 	   
@@ -84,7 +87,7 @@ class PostType_Data
 					
 		$conditions = array(
 			'posts_per_page' => $limit,
-			'post_type' => 'posstype',
+			'post_type' => 'POSTTYPE',
 			'post_status' => 'publish',
 			'orderby' => 'title',
 			'order' => 'ASC',
@@ -102,7 +105,7 @@ class PostType_Data
 		 	
 			foreach($posts as $post) :
 				
-				$output[] = $this->single_posttype_data($post->ID);
+				$output[] = $this->single_POSTTYPE_data($post->ID);
 
 			endforeach;
 			
